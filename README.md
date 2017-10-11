@@ -1,6 +1,6 @@
 # 讯商报表
 
-赶紧来体验体验吧！
+[赶紧来体验体验吧！](https://xonlystar.github.io/xunsoft_reporter/)
 
 - 服务器名称:成都5+1
 - 服务器地址:http://cd51.3322.org:8082/api/

@@ -1,0 +1,65 @@
+<div data-page="account_serverUpdate" class="page">
+
+	<div class="navbar">
+	    <div class="navbar-inner">
+	    	<div class="left">
+	    		<a href="#" class="back link">
+	        		<i class="fa fa-arrow-left fa-2x"></i>					
+	        	</a>
+	    	</div>
+	        <div class="center">修改服务器</div>	
+	        <div class="right">
+              	<a href="#" v-on:click="save" class="link">
+	        		<i class="fa fa-save fa-2x"></i>					
+	        	</a>
+            </div>        
+	    </div>
+	</div>
+
+	<div class="page-content">
+		<div class="list-block">
+			<ul>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+					         <i class="fa fa-server"></i>						
+						</div>
+						<div class="item-inner">
+				         <div class="item-title label">服务器名称</div>
+				          <div class="item-input">
+				              <input placeholder="服务器名称" v-model="dataModel.name" type="text" name="name">
+				          </div>
+				        </div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+					         <i class="fa fa-globe"></i>						
+						</div>
+						<div class="item-inner">
+				          <div class="item-title label">服务器地址</div>
+				          <div class="item-input">				              
+				              <textarea v-model="dataModel.serverUrl" maxlength="150"  rows="3"> </textarea>
+				          </div>
+				        </div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+					         <i class="fa fa-search"></i>						
+						</div>
+						<div class="item-inner">
+				         <div class="item-title label">查看器地址</div>
+				          <div class="item-input">				            
+				              <textarea maxlength="150" rows="3" v-model="dataModel.reportUrl"></textarea>
+				          </div>
+				        </div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

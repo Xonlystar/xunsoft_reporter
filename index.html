@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+       <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" 
+ content="default-src *; frame-src *; style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+ script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="lib/framework7/css/framework7.ios.css">
+        <link rel="stylesheet" type="text/css" href="lib/framework7/css/framework7.ios.colors.css">
+        <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <title>讯商报表查看器</title>
+    </head>
+    <body>
+        <div class="panel-overlay"></div>
+
+        <div class="views">
+            <div class="view view-main">
+                <div class="pages navbar-fixed">
+                    <div data-page="index" class="page login">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/underscore/underscore.js"></script>
+        <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+        <script type="text/javascript" src="lib/md5/md5.js"></script>
+        <script type="text/javascript" src="lib/vue/vue.min.js"></script>
+        <script type="text/javascript" src="js/component.js"></script>
+        <script type="text/javascript" src="js/filter.js"></script>
+        
+        <script type="text/javascript">
+            var reportApp = new Framework7({
+                modalButtonOk:'确定',
+                modalButtonCancel:'取消',
+                modalTitle:'提示',
+                cache:false,
+            });
+            var $$ = Dom7;
+            var mainView = reportApp.addView('.view-main', {
+              domCache:true
+            });
+        </script>
+        
+        <script type="text/javascript" src="js/common.js"></script>
+
+
+        <script type="text/javascript" src="js/home.js"></script>
+
+        <script type="text/javascript" src="js/account/login.js"></script>
+        <script type="text/javascript" src="js/account/server.js"></script>
+        <script type="text/javascript" src="js/account/serverAdd.js"></script>
+        <script type="text/javascript" src="js/account/serverUpdate.js"></script>
+
+        <script type="text/javascript" src="js/report/reportList.js"></script>
+        <script type="text/javascript" src="js/report/reportViewer.js"></script>
+
+        <script type="text/javascript" src="js/init.js"></script>
+    </body>
+</html>

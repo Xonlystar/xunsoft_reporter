@@ -1,0 +1,50 @@
+ <div data-page="home" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+              
+            </div>
+            <div class="center">
+                报表查看器
+            </div>
+            <div class="right">
+              <a href="#" v-on:click="singOut" class="link">
+                <i class="fa fa-sign-out fa-2x"></i>
+              </a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content pull-to-refresh-content">
+        <div class="pull-to-refresh-layer">
+          <div class="pull-to-refresh-arrow"></div>
+        </div>
+        
+        <div class="list-block media-list">
+            <ul>
+                <li v-for="item in response.categories">
+                    <a href="page/report/reportList.html?categoryID={{item.DataModel.ID}}" class="item-content item-link">
+                        <div class="item-media">
+                            <category-pic :url="item.DataModel.Pic"></category-pic>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">{{item.DataModel.Name}}</div>
+                                <div class="item-after">{{item.ReportCount}}张</div>
+                            </div>
+                            <div class="item-subtitle">
+                                {{item.CreateUserName}}创建于{{item.DataModel.CreateDateTime | date}}
+                            </div>
+                            <div class="item-text">
+                                {{item.DataModel.Description}}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div v-show="response.categories.length==0" class="content-block">
+            <p class="text-center">您还未被分配任何可以查看的报表</p>
+        </div>
+    </div>
+</div>

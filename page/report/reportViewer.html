@@ -1,0 +1,22 @@
+ <div data-page="report_reportViewer" class="page">
+ 	<div class="navbar">
+	    <div class="navbar-inner">
+	    	<div class="left">
+	    		<a href="#" class="back link">
+	        		<i class="fa fa-arrow-left fa-2x"></i>					
+	        	</a>
+	    	</div>
+	        <div class="center">报表预览</div>	
+	        <div class="right">
+              	<a href="#" v-on:click="favorite" class="link">
+	        		<i class="fa fa-star fa-2x"></i>					
+	        	</a>
+            </div>        
+	    </div>
+	</div>
+
+	<div class="page-content">
+		<iframe width="100%" height="100%" marginheight="0px" marginwidth="0px" frameborder="0" v-on:load="loaded" v-on:error="errored" :src="viewUrl"></iframe>
+	</div>
+
+ </div>

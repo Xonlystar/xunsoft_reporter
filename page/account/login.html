@@ -1,0 +1,54 @@
+ <div data-page="account_login" class="page">
+ 	<div class="navbar">
+	    <div class="navbar-inner">
+	    	<div class="left">
+	    		<a href="#" class="back link">
+	        		<i class="fa fa-arrow-left fa-2x"></i>					
+	        	</a>
+	    	</div>
+	    	<div class="center">
+	    		登录
+	    	</div>       
+	    </div>
+	</div>
+
+	<div class="page-content">
+		<div class="content-block">
+			<logo-pic :url="logo"></logo-pic>
+		</div>
+		<div class="list-block">
+			<ul>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="fa fa-user"></i>
+						</div>
+						<div class="item-inner">
+				          <div class="item-input">
+				              <input v-model="dataModel.userName" type="text" name="name">
+				          </div>
+				        </div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media">
+							<i class="fa fa-key"></i>
+						</div>
+						<div class="item-inner">
+				          <div class="item-input">
+				              <input v-model="dataModel.userPassword" type="password" name="password">
+				          </div>
+				        </div>
+					</div>
+				</li>
+				<li>
+			      <a href="#" v-on:click="login" class="item-link list-button">
+			      	登录<i class="fa fa-sign-in"></i>
+			      </a>
+			    </li>
+			</ul>
+		</div>
+	</div>
+
+ </div>
